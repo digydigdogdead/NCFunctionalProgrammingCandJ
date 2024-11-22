@@ -22,6 +22,8 @@ namespace FunctionalProgramming
             //Console.WriteLine(Exercises001.CheckValidEmail("validuser@northcoders.co.uk"));
             //Console.WriteLine(Exercises001.CheckValidEmail("validUser@gmail.com"));
 
+            Exercises002.GetUserNames();
+
         }
     }
 }
