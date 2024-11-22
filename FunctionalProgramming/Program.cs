@@ -22,7 +22,18 @@ namespace FunctionalProgramming
             //Console.WriteLine(Exercises001.CheckValidEmail("validuser@northcoders.co.uk"));
             //Console.WriteLine(Exercises001.CheckValidEmail("validUser@gmail.com"));
 
-            Exercises002.GetUserNames();
+            //Exercises002.GetUserNames();
+
+            List<int> list = new List<int>
+            {
+                1, 2, 3, 4
+            };
+
+            Exercises002.SquaredNums(list);
+            foreach (int i in list)
+            {
+                Console.WriteLine(i);
+            }
 
         }
     }
