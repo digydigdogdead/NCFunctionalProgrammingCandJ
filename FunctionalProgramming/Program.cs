@@ -18,9 +18,9 @@ namespace FunctionalProgramming
             //Console.WriteLine(Exercises001.SumIndices("start", "pale"));
 
             //Task 6
-            Console.WriteLine(Exercises001.CheckValidEmail("user@northercoders.co.uk"));
-            Console.WriteLine(Exercises001.CheckValidEmail("validuser@northcoders.co.uk"));
-            Console.WriteLine(Exercises001.CheckValidEmail("validUser@gmail.com"));
+            //Console.WriteLine(Exercises001.CheckValidEmail("user@northercoders.co.uk"));
+            //Console.WriteLine(Exercises001.CheckValidEmail("validuser@northcoders.co.uk"));
+            //Console.WriteLine(Exercises001.CheckValidEmail("validUser@gmail.com"));
 
         }
     }
