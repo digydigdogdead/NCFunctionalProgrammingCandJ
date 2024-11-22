@@ -43,5 +43,33 @@ namespace FunctionalProgramming
             SquaredNums(list);
             PrintNums(list);
         };
+
+        public static Dictionary<string, List<string>> FilterEmails(List<string> input)
+        {
+            Dictionary<string, List<string>> result = new Dictionary<string, List<string>>
+            {
+                { ".co.uk", new List<string>() },
+                { ".com", new List<string>() },
+                { "invalid", new List<string>() }
+            };
+
+            foreach (var email in input)
+            {
+                if (email.EndsWith(".co.uk"))
+                {
+                    result[".co.uk"].Add(email);
+                }
+                else if (email.EndsWith(".com"))
+                {
+                    result[".com"].Add(email);
+                }
+                else
+                {
+                    result["invalid"].Add(email);
+                }
+            }
+
+            return result;
+        }
     }
 }
