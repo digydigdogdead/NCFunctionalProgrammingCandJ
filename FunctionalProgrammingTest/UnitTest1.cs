@@ -118,5 +118,62 @@ namespace FunctionalProgrammingTest
 
             result.Should().Be(expected);
         }
+
+        [Test]
+        public void GetEmailListTest()
+        {
+            List<string> emailList = Exercises002.GetCoolPeople();
+
+            emailList.Should().BeEquivalentTo(new List<string>
+            {
+                "rich.neat@boardgamer.com",
+                "poppy.mcdonnell@irishdancer.com",
+                "neil.hughes@walkingoncustard.com",
+                "alice.yang@midfielder.com",
+                "pippa.austin@musician.com"
+            });
+        }
+
+        [Test]
+        public void GetUserNamesTest()
+        {
+            // Arrange
+            List<string> emails1 = new List<string>
+            {
+                "rich.neat@boardgamer.com",
+                "poppy.mcdonnell@irishdancer.com",
+                "neil.hughes@walkingoncustard.com",
+                "alice.yang@midfielder.com",
+                "pippa.austin@musician.com"
+            };
+
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            // Act
+
+            Exercises002.GetUserNames();
+            var output = stringWriter.ToString();
+
+            // Assert
+            output.Trim().Should().Be(@"rich.neat
+poppy.mcdonnell
+neil.hughes
+alice.yang
+pippa.austin");
+        }
+
+        [Test]
+        public void SquaredNumsTest()
+        {
+            List<int> input1 = new List<int> { 1, 2, 3 };
+            List<int> input2 = new List<int> { 12, 44, 4 };
+
+            Exercises002.SquaredNums(input1);
+            Exercises002.SquaredNums(input2);
+
+            input1.Should().BeEquivalentTo(new List<int> { 1, 4, 9 });
+            input2.Should().BeEquivalentTo(new List<int> { 144, 1936, 16 });
+        }
     }
 }
