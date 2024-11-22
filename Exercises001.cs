@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,5 +20,25 @@ namespace FunctionalProgramming
             int eIndex = str2.IndexOf("e");
             return aIndex + eIndex;
         };
+
+        public static Predicate<string> isValidDomain = email => email.EndsWith("@northcoders.co.uk");
+
+        public static Predicate<string> isValidUserName = email =>
+        {
+            int indexOfat = email.IndexOf('@');
+            return indexOfat >= 5;
+        };
+
+        public static string CheckValidEmail(string email)
+        {
+            if (isValidDomain(email) && isValidUserName(email))
+            {
+                return "Email domain and user valid, please continue";
+            }
+            else
+            {
+                return "Email domain and user name invalid, please check your input";
+            }
+        }
     }
 }
