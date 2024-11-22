@@ -1,12 +1,18 @@
-﻿namespace FunctionalProgramming
+﻿
+
+namespace FunctionalProgramming
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            List<int> numbers = new List<int> { 4, 15, 55, 78, 12 };
+            // Task 3
+            //List<int> numbers = new List<int> { 4, 15, 55, 78, 12 };
+            //numbers.ForEach(num => Console.WriteLine(Exercises001.AddTen(num)));
 
-            numbers.ForEach(num => Console.WriteLine(Exercises001.AddTen(num)));
+            // Task 4
+            List<string> words = new List<string> { "Amazing!", "apple!", "Awesome!", "Artichoke" };
+            words.ForEach(word => Console.WriteLine(Exercises001.GrammarCheck(word)));
         }
     }
 }
