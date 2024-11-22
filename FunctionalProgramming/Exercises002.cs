@@ -18,6 +18,15 @@ namespace FunctionalProgramming
         };
 
 
+        public static Action GetUserNames = () =>
+        {
+            var emails = GetCoolPeople();
 
+            emails.ForEach(email =>
+            {
+                string username = email.Split('@')[0];
+                Console.WriteLine(username);
+            });
+        };
     }
 }
