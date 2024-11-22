@@ -11,8 +11,12 @@ namespace FunctionalProgramming
             //numbers.ForEach(num => Console.WriteLine(Exercises001.AddTen(num)));
 
             // Task 4
-            List<string> words = new List<string> { "Amazing!", "apple!", "Awesome!", "Artichoke" };
-            words.ForEach(word => Console.WriteLine(Exercises001.GrammarCheck(word)));
+            //List<string> words = new List<string> { "Amazing!", "apple!", "Awesome!", "Artichoke" };
+            //words.ForEach(word => Console.WriteLine(Exercises001.GrammarCheck(word)));
+
+            // Task 5
+            Console.WriteLine(Exercises001.SumIndices("start", "pale"));
+
         }
     }
 }
