@@ -29,12 +29,7 @@ namespace FunctionalProgramming
                 1, 2, 3, 4
             };
 
-            Exercises002.SquaredNums(list);
-            foreach (int i in list)
-            {
-                Console.WriteLine(i);
-            }
-
+            Exercises002.PrintSquaredNums(list);
         }
     }
 }

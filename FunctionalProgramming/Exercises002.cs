@@ -37,5 +37,11 @@ namespace FunctionalProgramming
             }
         };
 
+        public static Action<List<int>> PrintNums = (list) => list.ForEach(x => Console.WriteLine(x));
+        public static Action<List<int>> PrintSquaredNums = (list) =>
+        {
+            SquaredNums(list);
+            PrintNums(list);
+        };
     }
 }
