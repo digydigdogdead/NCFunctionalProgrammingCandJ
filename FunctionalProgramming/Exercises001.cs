@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class Exercises001
+    public class Exercises001
     {
         public static Func<int, int> AddOne {  get; set; } = (x) => x + 1;
         public static Func<int, int> SquareIt = (x) => x * x;
