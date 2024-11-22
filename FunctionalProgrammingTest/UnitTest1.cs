@@ -175,5 +175,50 @@ pippa.austin");
             input1.Should().BeEquivalentTo(new List<int> { 1, 4, 9 });
             input2.Should().BeEquivalentTo(new List<int> { 144, 1936, 16 });
         }
+
+        [Test]
+        public void PrintNumsTest()
+        {
+            List<int> ints = new List<int> { 1, 2, 3, 4 };
+
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            Exercises002.PrintNums(ints);
+
+            var output = stringWriter.ToString().Trim();
+
+
+            output.Should().Be(@"1
+2
+3
+4");
+        }
+
+        [Test]
+        public void FilterEmailsTest()
+        {
+            List<string> emailList = new List<string>
+            {
+                "alice.yang@northcoders.com",
+                "richard.neat@northcoders.com",
+                "mario@plumbing.it",
+                "link@hyrule.co.uk",
+                "shrek@duloc.com",
+                "neil.hughes@walkingoncustard.com",
+                "csharp@microsoft.cs",
+                "ziggy@spidersfrommars.co.uk",
+                "lemmy@motorhead.co,uk",
+                "me@myhouse.sleep"
+            };
+            var filteredEmails = Exercises002.FilterEmails(emailList);
+
+            filteredEmails.Should().BeEquivalentTo(new Dictionary<string, List<string>>
+            {
+                { ".co.uk", new List<string> {"link@hyrule.co.uk", "ziggy@spidersfrommars.co.uk"} },
+                {".com", new List<string> {"alice.yang@northcoders.com", "richard.neat@northcoders.com", "shrek@duloc.com", "neil.hughes@walkingoncustard.com" } },
+                {"invalid", new List<string>{"mario@plumbing.it", "csharp@microsoft.cs", "lemmy@motorhead.co,uk", "me@myhouse.sleep"} }
+            });
+        }
     }
 }
